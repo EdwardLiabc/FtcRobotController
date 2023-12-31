@@ -14,6 +14,7 @@ import org.firstinspires.ftc.teamcode.subsystems.Outtake;
 public class AATele extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
+        /*
         CrabRobot robot = new CrabRobot(this);
         waitForStart();
 
@@ -75,8 +76,9 @@ public class AATele extends LinearOpMode {
             telemetry.addData("left servo position: ", robot.outtake.getLeftServoPos());
             telemetry.addData("right intake servo position: ", robot.intake.getRightServoPos());
             telemetry.addData("left intake servo position: ", robot.intake.getLeftServoPos());
+            telemetry.addData("height from base: ",robot.intake.getDistanceSensed());
             //Log.v("arm", "right servo position: "+ robot.outtake.getRightServoPos());
 
-        }
+        }*/
     }
 }

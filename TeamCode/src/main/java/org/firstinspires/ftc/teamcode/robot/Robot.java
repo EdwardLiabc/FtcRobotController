@@ -6,15 +6,23 @@ import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.hardware.lynx.LynxModule;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.AnalogSensor;
+import com.qualcomm.robotcore.hardware.ColorRangeSensor;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.VoltageSensor;
+import com.qualcomm.robotcore.hardware.NormalizedColorSensor;
+import com.qualcomm.robotcore.hardware.TouchSensor;
+import com.qualcomm.robotcore.hardware.DigitalChannel;
+
+
 
 import org.firstinspires.ftc.teamcode.hardware.CachingDcMotorEx;
 import org.firstinspires.ftc.teamcode.hardware.CachingServo;
 import org.firstinspires.ftc.teamcode.hardware.Encoder;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -121,6 +129,9 @@ public class Robot {
         listeners.add(servo);
         return servo;
     }
+    public DigitalChannel getDigitalChannel(String deviceName){
+        return hardwareMap.get(DigitalChannel.class, deviceName);
+    }
 
     public VoltageSensor getVoltageSensor() {
         return hardwareMap.voltageSensor.iterator().next();
@@ -144,6 +155,23 @@ public class Robot {
         return hardwareMap.get(AnalogSensor.class, deviceName);
     }
 
+    public DistanceSensor getDistanceSensor(String deviceName){
+        return hardwareMap.get(DistanceSensor.class, deviceName);
+    }
+
+    public TouchSensor getTouchSensor(String deviceName){
+        return hardwareMap.get(TouchSensor.class, deviceName);
+    }
+
+    public NormalizedColorSensor getNormalizedCSenor (String deviceName){
+        return hardwareMap.get(NormalizedColorSensor.class, deviceName);
+    }
+    public ColorSensor getColorSensor(String deviceName){
+        return hardwareMap.get(ColorSensor.class, deviceName);
+    }
+    public ColorRangeSensor getColorRangeSensor(String deviceName){
+        return hardwareMap.get(ColorRangeSensor.class, deviceName);
+    }
     public void registerSubsystem(Subsystem subsystem) {
         if (!subsystems.contains(subsystem)) subsystems.add(subsystem);
     }

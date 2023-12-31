@@ -21,8 +21,8 @@ public class Outtake implements Subsystem{
 
 
     public Outtake(Robot robot) {
-        armServoL = robot.getServo("armServoL");
-        armServoR = robot.getServo("armServoR");
+        armServoL = robot.getServo("armServo_Left");
+        armServoR = robot.getServo("armServo_Right");
 
     }
 

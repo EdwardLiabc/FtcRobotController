@@ -5,21 +5,24 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import org.firstinspires.ftc.teamcode.robot.Robot;
 
 public class CrabRobot extends Robot {
-    public final SimpleMecanumDrive mecanumDrive;
+    //public final SimpleMecanumDrive mecanumDrive;
     //public final Intake intake;
-    public final Outtake outtake;
+    //public final Outtake outtake;
     public final Intake intake;
+    public final MagnetAndTouch magnetAndTouch;
     public CrabRobot(LinearOpMode opMode) {
         super(opMode);
         //mecanumDrive = new SimpleMecanumDrive(this);
-        mecanumDrive = new SimpleMecanumDrive(this);
-        registerSubsystem(mecanumDrive);
+        //mecanumDrive = new SimpleMecanumDrive(this);
+        //registerSubsystem(mecanumDrive);
         //intake = new Intake(this);
         //registerSubsystem(intake);
-        outtake = new Outtake(this);
-        registerSubsystem(outtake);
+        //outtake = new Outtake(this);
+        //registerSubsystem(outtake);
         intake = new Intake(this);
+        magnetAndTouch = new MagnetAndTouch(this);
         registerSubsystem(intake);
+        registerSubsystem(magnetAndTouch);
 
     }
 }
